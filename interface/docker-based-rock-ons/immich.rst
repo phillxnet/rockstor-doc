@@ -111,7 +111,7 @@ You'll see a screen indicating the Rock-on is being installed. Click *Close*.
 Congratulations! At this point Immich will be up-and-running. 
 
 Click on the **Immich UI** button to open the web configuration and complete 
-the Immich-specific set-up.
+the Immich-specific set-up. (See: :ref:`_immich_setup`)
 
 .. image:: /images/interface/docker-based-rock-ons/immich_afterinstall.png
    :width: 100%
@@ -168,3 +168,49 @@ Then click on **Next**.
 If everything looks fine on the summary configuration page, then click on **Next** again, and then **Submit**.
 
 After the Immich will be up-and-running again, go into your admin **External Libraries** configuration page in Immich, and add the supplied path (i.e. ``/data/test1``).
+
+.. _immich_setup:
+
+Finishing the Immich set-up
+------------------------------
+
+If you haven't already, click on the **Immich UI** button. At which point the web UI will load.
+
+Click on the **Getting Started** button.
+
+First you will create an admin account. 
+
+If you intend to use the `email notification <https://docs.immich.app/administration/email-notification/>`_ feature, then it is recommended to use your actual email address. Otherwise, you can input any kind of email-like string into the *Admin Email* field.
+
+Click on the **Theme** button and choose the preferred theme.
+
+Click on the **Language** button and choose the preferred language.
+
+Click on the **Server Privacy** button.
+
+**Map**: if enabled, it will use Immich's map tile service to show the location of where the photo was taken on a world map.
+
+**Version Check**: if enabled, it will periodically check Immich's github repo, if a new release is available.
+
+Click on the **User Privacy** button.
+
+**Google Cast**: if enabled, it will load resources from Google to make Google Cast work.
+
+Click on the **Storage Template** button.
+
+This setting is about how files are organized on the disk. If you want to keep it simple, keep it disabled. 
+You can always migrate to storage templates at a later date.
+
+But if you want custom define in what kind of folder structure and filenames you want your files to have,
+then you should enable this setting.
+
+You can also `check the detailed differences of using storage templates or not <https://docs.immich.app/administration/backup-and-restore#asset-types-and-storage-locations>`_.
+
+
+
+
+
+
+
+
+
