@@ -44,15 +44,16 @@ but well supported.
 Installing the Immich rock-on
 ------------------------------
 The Immich Rock-on requires 3 
-[shares to be created](https://rockstor.com/docs/interface/storage/shares-btrfs-subvolumes.html#creating-a-share) 
+`shares to be created <https://rockstor.com/docs/interface/storage/shares-btrfs-subvolumes.html#creating-a-share>`_
 before the installation can begin:
  
  - Library share: used by Immich to store uploaded photos/videos,
  - Database share,
  - Cache share: used by Immich's machine-learning functionality
 
-We are now ready to start the installation of the Immich rock-on. Click the
-*Install* button next to the **Immich** listing on the *Rock-ons*
+We are now ready to start the installation of the Immich rock-on. 
+
+Click the *Install* button next to the **Immich** listing on the *Rock-ons*
 page.
 
 .. image:: /images/interface/docker-based-rock-ons/immich_preinstall.png
@@ -61,7 +62,9 @@ page.
 
 
 The install wizard has appeared. 
+
 In the first step, please select the 3 shares that you created previously.
+
 Then click on **Next**.
 
 .. image:: /images/interface/docker-based-rock-ons/immich_shares.png
@@ -69,8 +72,10 @@ Then click on **Next**.
    :align: center
 
 
-At this stage you will set the port used to reach Immich's web-UI. The
-default port is usually fine as long as it is free.
+At this stage you will set the port used to reach Immich's web-UI. 
+
+The default port is usually fine as long as it is free.
+
 Then click on **Next**.
                        
 .. image:: /images/interface/docker-based-rock-ons/immich_webUI_port.png
@@ -79,11 +84,14 @@ Then click on **Next**.
 
                        
 At this stage you will set some environment variables.
+
 **Log level**: Input the desired log level. You will want to use **log** 
 for normal operations. Other available values: verbose, debug, warn, error.
+
 **Ignore error checks**: Input whether you want to skip mount error checks. 
 You will want to use **false**, unless you have 
-[issues with your Immich instance](https://docs.immich.app/administration/system-integrity).
+`issues with your Immich instance <https://docs.immich.app/administration/system-integrity>`_.
+
 Then click on **Next**.
 
 .. image:: /images/interface/docker-based-rock-ons/immich_env_vars.png
@@ -98,9 +106,10 @@ Verify the information you've provided is correct, then click **Submit**.
    :align: center
 
                                    
-You'll see a screen indicating the Rock-on is being installed.  Click "Close".
+You'll see a screen indicating the Rock-on is being installed. Click *Close*.
 
 Congratulations! At this point Immich will be up-and-running. 
+
 Click on the **Immich UI** button to open the web configuration and complete 
 the Immich-specific set-up.
 
@@ -120,19 +129,22 @@ want to import them into Immich.
 **WARNING: Write access!**
 
 Mounting an external library of photos/videos via the Web-UI will give Immich 
-write-access by default. If you want to restrict Immich to read-only-access, 
-you will need to do the following instead:
+write-access by default. 
+
+If you want to restrict Immich to read-only-access, you will need to do the following instead:
                                    
- 1. download the [Immich Rock-on configuration file](https://github.com/rockstor/rockon-registry/blob/master/immich.json),
- 2. save it under `/opt/rockstor/rockons-metastore/`,
- 3. edit the file: toward the end of the file, right after `[ "-e", "DB_HOSTNAME=immich-database" ]`, insert the following line: `, [ "-v", "/mnt2/MyPrivatePhotoCollection:/mnt2/MyPrivatePhotoCollection:ro" ]`, where `/mnt2/MyPrivatePhotoCollection` is the path to the share where you keep your existing photos/videos,
+ 1. download the `Immich Rock-on configuration file <https://github.com/rockstor/rockon-registry/blob/master/immich.json>`_,
+ 2. save it under ``/opt/rockstor/rockons-metastore/``,
+ 3. edit the file: toward the end of the file, right after ``[ "-e", "DB_HOSTNAME=immich-database" ]``, insert the following line: ``, [ "-v", "/mnt2/MyPrivatePhotoCollection:/mnt2/MyPrivatePhotoCollection:ro" ]``, where ``/mnt2/MyPrivatePhotoCollection`` is the path to the share where you keep your existing photos/videos,
  4. save file,
  5. in case your Immich instance is already running: go into the "ROCK-ONS" menu, find the Immich Rock-on, set it to **OFF**, afterwards click on the **Uninstall** button,
  6. now re-install the rock-on.
 
                                    
 **If you want to continue with a write-access external library, read on.**
+
 To make the share available to Immich, you will need to first stop the running Immich instance.
+
 You do that by clicking on the green **ON** button (which will subsequently turn to a red **OFF** button).
 
 Now click on the small wrench icon right next to the red **OFF** button, and click on the **Add Storage** button.
@@ -143,7 +155,9 @@ Now click on the small wrench icon right next to the red **OFF** button, and cli
 
                                    
 **Storage**: select the share that contains your existing photos/videos.
+
 **Rock-on directory**: input a path under which your share will be available in the Immich instance.
+
 Then click on **Next**.
                                    
 .. image:: /images/interface/docker-based-rock-ons/immich_settings_for_external_library.png
@@ -152,4 +166,5 @@ Then click on **Next**.
 
 
 If everything looks fine on the summary configuration page, then click on **Next** again, and then **Submit**.
-After the Immich will be up-and-running again, go into your admin **External Libraries** configuration page in Immich, and add the supplied path (i.e. `/data/test1`).
+
+After the Immich will be up-and-running again, go into your admin **External Libraries** configuration page in Immich, and add the supplied path (i.e. ``/data/test1``).
