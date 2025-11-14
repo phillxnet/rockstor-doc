@@ -25,19 +25,23 @@ and AI-powered object detection and classification.
 For further details and the most up-to-date description of Immich, please visit the 
 `project's documentation <https://docs.immich.app/overview/quick-start/>`_.  
 
-.. _immich_doc:
+.. _immich_req:
 
-Immich Documentation
+System Requirements
 ---------------------
 
-Immich’s capabilities can be greatly expanded and customized to fit your storage 
-setup, hardware, and preferences. The project provides extensive documentation 
-to guide you through installation, configuration, and advanced features. 
-Out-of-the-box, Immich already offers a wide range of functionality suitable for 
-most users, including multi-device synchronization, map-based location views, 
-and powerful search tools. Further customization—such as integrating with external 
-storage, fine-tuning AI models, or extending server-side options is entirely optional 
-but well supported.
+A system with at least 4GB of RAM and 2 CPU cores. 
+
+Recommended is a system with at least 6GB of RAM and 4 CPU cores. 
+
+Real world usage data for Immich v2.2.3: 
+for ~70k photos/videos, up to 4GB (8GB peak) of RAM is normally being used. 
+CPU usage is mostly negligible, but it will shot up when new files will be ingested.
+
+This can be controlled via the administration settings: :ref:`_immich_other_settings`.
+
+You can read about requirements 
+`in more detail <https://docs.immich.app/install/requirements/>`_.
 
 .. _immich_install:
 
@@ -232,21 +236,21 @@ Login to your Immich instance with your Admin account.
 Click on your profile image on the top-right corner of the page, then click on **Administration**.
                                    
 .. image:: /images/interface/docker-based-rock-ons/immich_administration.png
-   :width: 100%
+   :width: 40%
    :align: center
 
 
 Click on the **Create user** link below your profile image on the top-right corner of the page.
 
 .. image:: /images/interface/docker-based-rock-ons/immich_create_user.png
-   :width: 100%
+   :width: 40%
    :align: center
 
 
 Fill in the user account data. Note that files coming from external libraries do *not* count toward the Quota Size.
 
 .. image:: /images/interface/docker-based-rock-ons/immich_user_form.png
-   :width: 100%
+   :width: 25%
    :align: center
 
 
@@ -275,20 +279,21 @@ Also note that every external library must have an owner. If you haven't created
 Click on your profile image on the top-right corner of the page, then click on **Administration**.
                                    
 .. image:: /images/interface/docker-based-rock-ons/immich_administration.png
+   :width: 40%
    :align: center
 
  
 Click on the **External Libraries** item in the left-side menu.
                                    
 .. image:: /images/interface/docker-based-rock-ons/immich_external_libraries.png
-   :width: 100%
+   :width: 40%
    :align: center
 
 
 Click on the **Create library** link below your profile image on the top-right corner of the page.
                                    
 .. image:: /images/interface/docker-based-rock-ons/immich_create_library.png
-   :width: 100%
+   :width: 40%
    :align: center
 
 
@@ -300,21 +305,45 @@ The user may choose to
 Click on the **Create** Button.
 
 .. image:: /images/interface/docker-based-rock-ons/immich_external_library_owner.png
-   :width: 100%
+   :width: 50%
    :align: center
 
-Input the path to the external library that you've defined at :ref:`_immich_mounting_external_library`. E.g. ``/mnt2/MyPrivatePhotoCollection``, ``/data/test1``...
+Input the path to the external library that you've defined at :ref:`_immich_mounting_external_library`. 
+E.g. ``/mnt2/MyPrivatePhotoCollection``, ``/data/test1``...
 
 Click on the **Add** button.
 
 .. image:: /images/interface/docker-based-rock-ons/immich_external_library_import.png
-   :width: 100%
+   :width: 50%
    :align: center
 
 Click on the **Validate** button to check if the external library is correctly configured.
 
 .. image:: /images/interface/docker-based-rock-ons/immich_external_library_validate.png
-   :width: 100%
+   :width: 30%
    :align: center
 
-In case or problems, please refer to `in-depth explanation and troubleshooting information <https://docs.immich.app/features/libraries>`_.
+In case or problems, please refer to
+`in-depth explanation and troubleshooting information <https://docs.immich.app/features/libraries>`_.
+
+.. _immich_other_settings:
+
+Other important settings
+------------------------------
+
+Depending on your hardware specifications and cooling capabilities, 
+you will want to consider changing the default
+`concurrency settings <https://docs.immich.app/administration/jobs-workers#jobs>`_
+when new files are being ingested into your Immich instance.
+
+Try importing a large (10k+ files) external library, then follow the system temperature and responsiveness.
+
+If no overheating is happening after 20 minutes or so, then you're done!
+
+Otherwise, go to *Administration* > *Jobs* to see what is happening, then adapt the settings under the 
+**Manage Concurrency** link on the top-left.
+
+Non-problematic jobs: Sidecar metadata and External libraries.
+
+Intensive jobs: Generate thumbnails, Smart search, Face detection and Transcode videos.
+
