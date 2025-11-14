@@ -224,10 +224,10 @@ Click on the **Done** button to finish the set-up.
 New user account
 ------------------------------
 
-If you are the only user, or if you fully trust others, you can simply use the Admin account.
+If you wish, you can simply use the Admin account for now.
 Otherwise, you can consider creating new user accounts.
 
-Login to your Immich instance via a browser with your Admin account.
+Login to your Immich instance with your Admin account.
 
 Click on your profile image on the top-right corner of the page, then click on **Administration**.
                                    
@@ -267,15 +267,17 @@ Until then, here are some alternatives:
  1. create a single user account that you share with other people,
  2. 
 
-Prerequisite is that you have made your share available to Immich. See: :ref:`_immich_external_library_setup`.
+Here is how you can import your files into Immich.
+
+Prerequisite is that you have made your share available to Immich. See: :ref:`_immich_external_library_setup`. 
+Also note that every external library must have an owner. If you haven't created your user account(s), do so now. See: :ref:`_immich_new_user`
 
 Click on your profile image on the top-right corner of the page, then click on **Administration**.
                                    
 .. image:: /images/interface/docker-based-rock-ons/immich_administration.png
-   :width: 100%
    :align: center
 
-
+ 
 Click on the **External Libraries** item in the left-side menu.
                                    
 .. image:: /images/interface/docker-based-rock-ons/immich_external_libraries.png
@@ -290,4 +292,29 @@ Click on the **Create library** link below your profile image on the top-right c
    :align: center
 
 
-You can read an `in-depth explanation and troubleshooting information <https://docs.immich.app/features/libraries>`_.
+Choose a user that will be the owner of the external library. This means that 
+all files from the external library will be imported to the selected user's library. 
+The user may choose to 
+`share their library with other users with some limitations <https://docs.immich.app/features/partner-sharing/>`_.
+
+Click on the **Create** Button.
+
+.. image:: /images/interface/docker-based-rock-ons/immich_external_library_owner.png
+   :width: 100%
+   :align: center
+
+Input the path to the external library that you've defined at :ref:`_immich_mounting_external_library`. E.g. ``/mnt2/MyPrivatePhotoCollection``, ``/data/test1``...
+
+Click on the **Add** button.
+
+.. image:: /images/interface/docker-based-rock-ons/immich_external_library_import.png
+   :width: 100%
+   :align: center
+
+Click on the **Validate** button to check if the external library is correctly configured.
+
+.. image:: /images/interface/docker-based-rock-ons/immich_external_library_validate.png
+   :width: 100%
+   :align: center
+
+In case or problems, please refer to `in-depth explanation and troubleshooting information <https://docs.immich.app/features/libraries>`_.
