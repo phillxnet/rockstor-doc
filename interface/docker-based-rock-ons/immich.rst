@@ -118,18 +118,19 @@ the Immich-specific set-up. (See: :ref:`_immich_setup`)
    :align: center
 
                                    
-.. _immich_external_library:
+.. _immich_mounting_external_library:
 
-External Libraries
+Mounting External Libraries
 ---------------
 
 In case you already have a share full of existing photos and videos, you probably 
-want to import them into Immich.
+want to import them into Immich. 
+You can `read more about them <https://docs.immich.app/features/libraries>`_.
                                    
 **WARNING: Write access!**
 
 Mounting an external library of photos/videos via the Web-UI will give Immich 
-write-access by default. 
+write-access by default. This also means you will be able to delete files via Immich.
 
 If you want to restrict Immich to read-only-access, you will need to do the following instead:
                                    
@@ -180,7 +181,9 @@ Click on the **Getting Started** button.
 
 First you will create an admin account. 
 
-If you intend to use the `email notification <https://docs.immich.app/administration/email-notification/>`_ feature, then it is recommended to use your actual email address. Otherwise, you can input any kind of email-like string into the *Admin Email* field.
+If you intend to use the `email notification <https://docs.immich.app/administration/email-notification/>`_ feature, 
+then it is recommended to use your actual email address. 
+Otherwise, you can input any kind of email-like string into the *Admin Email* field.
 
 Click on the **Theme** button and choose the preferred theme.
 
@@ -201,16 +204,90 @@ Click on the **Storage Template** button.
 This setting is about how files are organized on the disk. If you want to keep it simple, keep it disabled. 
 You can always migrate to storage templates at a later date.
 
-But if you want custom define in what kind of folder structure and filenames you want your files to have,
+But if you want to custom define what kind of folder structure and filenames you want to have,
 then you should enable this setting.
 
-You can also `check the detailed differences of using storage templates or not <https://docs.immich.app/administration/backup-and-restore#asset-types-and-storage-locations>`_.
+You can also 
+`check the detailed differences of using storage templates or not <https://docs.immich.app/administration/backup-and-restore#asset-types-and-storage-locations>`_.
+
+Click on the **Backups** button and consider if you have any special backup requirements for your Immich instance.
+
+Click on the **Mobile App** button and consider if you want to install their official mobile app.
+
+Having the mobile app will allow you to access your files, 
+but more importantly, you will also be able to set automatic, background uploading of photos/videos to your Immich instance.
+
+Click on the **Done** button to finish the set-up.
+
+.. _immich_new_user:
+
+New user account
+------------------------------
+
+If you are the only user, or if you fully trust others, you can simply use the Admin account.
+Otherwise, you can consider creating new user accounts.
+
+Login to your Immich instance via a browser with your Admin account.
+
+Click on your profile image on the top-right corner of the page, then click on **Administration**.
+                                   
+.. image:: /images/interface/docker-based-rock-ons/immich_administration.png
+   :width: 100%
+   :align: center
 
 
+Click on the **Create user** link below your profile image on the top-right corner of the page.
+
+.. image:: /images/interface/docker-based-rock-ons/immich_create_user.png
+   :width: 100%
+   :align: center
 
 
+Fill in the user account data. Note that files coming from external libraries do *not* count toward the Quota Size.
+
+.. image:: /images/interface/docker-based-rock-ons/immich_user_form.png
+   :width: 100%
+   :align: center
 
 
+Click on the **Create** button to create the new user account.
+
+.. _immich_external_library_import:
+
+External Library Import
+------------------------------
+
+If you have an existing collection of photos and videos, you are probably going to want to include it into your Immich instance.
+
+**Note that there is currently no good central sharing solution present in Immich!**
+If you wanted to have a central repository of photos/videos that is shared between different users, 
+`you will need to wait <https://github.com/immich-app/immich/issues/12614>`_ until it's implemented.
+
+Until then, here are some alternatives:
+ 1. create a single user account that you share with other people,
+ 2. 
+
+Prerequisite is that you have made your share available to Immich. See: :ref:`_immich_external_library_setup`.
+
+Click on your profile image on the top-right corner of the page, then click on **Administration**.
+                                   
+.. image:: /images/interface/docker-based-rock-ons/immich_administration.png
+   :width: 100%
+   :align: center
 
 
+Click on the **External Libraries** item in the left-side menu.
+                                   
+.. image:: /images/interface/docker-based-rock-ons/immich_external_libraries.png
+   :width: 100%
+   :align: center
 
+
+Click on the **Create library** link below your profile image on the top-right corner of the page.
+                                   
+.. image:: /images/interface/docker-based-rock-ons/immich_create_library.png
+   :width: 100%
+   :align: center
+
+
+You can read an `in-depth explanation and troubleshooting information <https://docs.immich.app/features/libraries>`_.
