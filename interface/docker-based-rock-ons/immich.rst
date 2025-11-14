@@ -268,8 +268,11 @@ If you wanted to have a central repository of photos/videos that is shared betwe
 `you will need to wait <https://github.com/immich-app/immich/issues/12614>`_ until it's implemented.
 
 Until then, here are some alternatives:
- 1. create a single user account that you share with other people,
- 2. 
+
+#. Create a single user account that you share with other people: all people and devices will have access to the same library with all people/facial recognition data (and other metadata), and they will all be able to upload their own files to the library. Duplicates are detected on the whole library.
+#. `Use partner sharing <https://docs.immich.app/features/partner-sharing/>`_: other users will be able to view and download files (and their metadata) from your library, but won't also share the people/facial recognition data. You won't see other users' libraries automatically - they have to explicitly share back. Other users can't upload their files to your library. Duplicates are detected only on your library. Smart search and map features won't be shared.
+#. Create user accounts for each family member and one additional account with the external library, then using the partner sharing feature, share the external library with other users.
+#. Set-up the same external libraries for each user: causes unnecessary file metadata duplication.
 
 Here is how you can import your files into Immich.
 
