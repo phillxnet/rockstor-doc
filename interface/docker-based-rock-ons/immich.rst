@@ -276,7 +276,7 @@ Until then, here are some alternatives:
 
 Here is how you can import your files into Immich.
 
-Prerequisite is that you have made your share available to Immich. See: :ref:`_immich_external_library_setup`. 
+Prerequisite is that you have made your share available to Immich. See: :ref:`_immich_mounting_external_library`. 
 Also note that every external library must have an owner. If you haven't created your user account(s), do so now. See: :ref:`_immich_new_user`
 
 Click on your profile image on the top-right corner of the page, then click on **Administration**.
