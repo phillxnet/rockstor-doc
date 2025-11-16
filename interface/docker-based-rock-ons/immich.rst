@@ -36,7 +36,7 @@ Recommended is a system with at least 6GB of RAM and 4 CPU cores.
 
 Real world usage data for Immich v2.2.3: 
 for ~70k photos/videos, up to 4GB (8GB peak) of RAM is normally being used. 
-CPU usage is mostly negligible, but it will shot up when new files will be ingested.
+CPU usage is mostly negligible, but it will shoot up when new files are ingested.
 
 This can be controlled via the administration settings. See: :ref:`immich_other_settings`.
 
