@@ -341,7 +341,7 @@ when new files are being ingested into your Immich instance.
 
 Try importing a large (10k+ files) external library, then follow the system temperature and responsiveness.
 
-If no overheating is happening after 20 minutes or so, then you're done!
+If no sustained high temperatures are seen after 20 minutes or so, then you're done!
 
 Otherwise, go to *Administration* > *Jobs* to see what is happening, then adapt the settings under the 
 **Manage Concurrency** link on the top-left.
