@@ -38,7 +38,7 @@ Real world usage data for Immich v2.2.3:
 for ~70k photos/videos, up to 4GB (8GB peak) of RAM is normally being used. 
 CPU usage is mostly negligible, but it will shot up when new files will be ingested.
 
-This can be controlled via the administration settings: :ref:`_immich_other_settings`.
+This can be controlled via the administration settings. See: :ref:`immich_other_settings`.
 
 You can read about requirements 
 `in more detail <https://docs.immich.app/install/requirements/>`_.
@@ -115,7 +115,7 @@ You'll see a screen indicating the Rock-on is being installed. Click *Close*.
 Congratulations! At this point Immich will be up-and-running. 
 
 Click on the **Immich UI** button to open the web configuration and complete 
-the Immich-specific set-up. (See: :ref:`_immich_setup`)
+the Immich-specific set-up. (See: :ref:`immich_setup`)
 
 .. image:: /images/interface/docker-based-rock-ons/immich_afterinstall.png
    :width: 100%
@@ -125,7 +125,7 @@ the Immich-specific set-up. (See: :ref:`_immich_setup`)
 .. _immich_mounting_external_library:
 
 Mounting External Libraries
----------------
+---------------------------
 
 In case you already have a share full of existing photos and videos, you probably 
 want to import them into Immich. 
@@ -276,8 +276,8 @@ Until then, here are some alternatives:
 
 Here is how you can import your files into Immich.
 
-Prerequisite is that you have made your share available to Immich. See: :ref:`_immich_mounting_external_library`. 
-Also note that every external library must have an owner. If you haven't created your user account(s), do so now. See: :ref:`_immich_new_user`
+Prerequisite is that you have made your share available to Immich. See: :ref:`immich_mounting_external_library`. 
+Also note that every external library must have an owner. If you haven't created your user account(s), do so now. See: :ref:`immich_new_user`
 
 Click on your profile image on the top-right corner of the page, then click on **Administration**.
                                    
@@ -311,7 +311,7 @@ Click on the **Create** Button.
    :width: 50%
    :align: center
 
-Input the path to the external library that you've defined at :ref:`_immich_mounting_external_library`. 
+Input the path to the external library that you've defined at :ref:`immich_mounting_external_library`. 
 E.g. ``/mnt2/MyPrivatePhotoCollection``, ``/data/test1``...
 
 Click on the **Add** button.
