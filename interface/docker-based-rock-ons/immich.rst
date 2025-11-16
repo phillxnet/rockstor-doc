@@ -312,7 +312,7 @@ Click on the **Create** Button.
    :align: center
 
 Input the path to the external library that you've defined at :ref:`immich_mounting_external_library`. 
-E.g. ``/mnt2/MyPrivatePhotoCollection``, ``/data/test1``...
+E.g. ``/data/test1``...
 
 Click on the **Add** button.
 
