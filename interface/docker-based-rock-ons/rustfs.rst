@@ -93,6 +93,22 @@ Specify the share you created for RustFS.
    :width: 100%
    :align: center
 
+.. _rustfs_ports:
+
+RustFS Ports
+------------
+
+RustFS needs to know what TCP ports you would like to assign to the 
+S3 Application Programming Interface (API) and to the Web management 
+interface. The standard ports for S3-compatible servers are 9000 (API) 
+and 9001 (Web UI).  Specify those standard ports unless you have an 
+application that requires non-standard ports, or you have another 
+Rock-on already using those ports.
+
+.. image:: /images/interface/docker-based-rock-ons/rustfs_ports.png
+   :width: 100%
+   :align: center
+
 
 .. _rustfs_environment:
 
