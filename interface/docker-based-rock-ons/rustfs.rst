@@ -115,13 +115,13 @@ Rock-on already using those ports.
 Set the RustFS Environment Variables
 ------------------------------------
 RustFS needs values for three environment variables.  "Access Key" 
-(3 to 128 alphanumeric characters), 
-"Secret Key" (8 to 128 alphanumeric characters), 
-and "RUSTFS_CONSOLE_ENABLE".  
+(3 to 128 alphanumerics), 
+"Secret Key" (8 to 128 alphanumerics), 
+and "Enable Console".  
 "Access Key" and "Secret Key" are the username and password you 
 will use on the Web management interface and in your S3-compatible 
 client software.
-"RUSTFS_CONSOLE_ENABLE" should be set to "true" unless 
+"Enable Console" should be set to "true" unless 
 you have some reason for disabling the Web management interface.
 
 .. image:: /images/interface/docker-based-rock-ons/rustfs_environment.png
