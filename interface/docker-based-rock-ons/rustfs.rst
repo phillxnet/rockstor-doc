@@ -114,10 +114,10 @@ Rock-on already using those ports.
 
 Set the RustFS Environment Variables
 ------------------------------------
-RustFS needs values for three environment variables.  "Access Key" 
-(3 to 128 alphanumerics), 
-"Secret Key" (8 to 128 alphanumerics), 
-and "Enable Console".  
+RustFS needs values for three environment variables.  
+"Access Key" (3 to 128 alphanumerics), 
+"Secret Key" (8 to 128 alphanumerics), and 
+"Enable Console".  
 "Access Key" and "Secret Key" are the username and password you 
 will use on the Web management interface and in your S3-compatible 
 client software.
@@ -161,8 +161,8 @@ Congratulations!  Your installation is complete.
 
 RustFS Web Console Interface
 ----------------------------
-You can open a Web browser and navigate to 
-`http://rockstor-server-address:9001` to go to the RustFS Web management interface.  
+You can use the "RustFS UI" button to go to the 
+RustFS Web management interface.  
 There you can view and create storage objects.  
 Point your S3-compatible application at your new server and you are 
 up and running with RustFS block storage. 
